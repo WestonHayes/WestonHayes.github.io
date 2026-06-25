@@ -34,6 +34,7 @@ main{max-width:1440px;margin:0 auto}
   gap:44px;
   align-items:center;
   padding:64px 54px;
+  transform:rotate(90deg);
   border-bottom:1px solid var(--line)
 }
 
