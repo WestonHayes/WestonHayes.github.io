@@ -1,19 +1,17 @@
-# Weston Hayes GitHub Pages Site
+# Weston Hayes Portfolio Site
 
-This is the dark neon portfolio site that matches the preview style.
+Updated version with:
+- Donkey autonomous rocket project section
+- Rocket gallery
+- Certifications section with uploaded certificate PDFs
+- GitHub project cards
+- Dark neon portfolio styling
 
-## Deploy
+## Deploy update
 
-1. Create a repo named `WestonHayes.github.io`
-2. Upload these files/folders:
-   - `index.html`
-   - `assets/styles.css`
-   - `assets/app.js`
-3. Go to **Settings → Pages**
-4. Choose **Deploy from a branch**
-5. Select `main` and `/root`
-6. Save
+In your `WestonHayes.github.io` repository:
+1. Upload/replace `index.html`
+2. Upload/replace the entire `assets` folder
+3. Commit changes
 
-Your site will publish at:
-
-`https://WestonHayes.github.io`
+GitHub Pages will update automatically.
