@@ -28,13 +28,12 @@ main{max-width:1440px;margin:0 auto}
 .section{padding:86px 54px}
 
 .hero{
-  min-height:640px;
+  min-height:720px;
   display:grid;
   grid-template-columns:1fr .8fr;
   gap:44px;
   align-items:center;
   padding:64px 54px;
-  transform:rotate(90deg);
   border-bottom:1px solid var(--line)
 }
 
@@ -57,21 +56,33 @@ h2{font-size:clamp(2.2rem,4.8vw,5rem);line-height:.92;letter-spacing:-.07em;marg
   box-shadow:0 22px 70px rgba(0,0,0,.26)
 }
 
+/* HERO DONKEY CARD FIX:
+   Keeps the image rotated, makes the image area tall enough,
+   and prevents the title from being covered. */
 .hero-card{
   overflow:hidden;
   align-self:center;
+  min-height:660px;
+  display:flex;
+  flex-direction:column;
 }
 
 .hero-card img{
   display:block;
   width:100%;
-  height:auto;
-  max-height:none;
-  object-fit:contain;
-  transform:none;
+  height:500px;
+  object-fit:cover;
+  object-position:center center;
+  transform:rotate(90deg) scale(1.25);
+  transform-origin:center center;
 }
 
-.hero-card div{padding:24px}
+.hero-card div{
+  position:relative;
+  z-index:2;
+  padding:24px;
+  background:linear-gradient(180deg,rgba(5,8,20,.10),rgba(5,8,20,.22));
+}
 .hero-card span,.repo-card span,.cert-card span{color:var(--green);font-size:12px;letter-spacing:.12em;font-weight:950;text-transform:uppercase}
 
 .section-head{max-width:980px;margin-bottom:32px}
@@ -123,11 +134,29 @@ footer a{color:#58aaff;text-decoration:none}
   .build-cards,.project-grid,.cert-grid{grid-template-columns:repeat(2,1fr)}
   .gallery{grid-template-columns:1fr 1fr}
   .contact{margin:20px 22px 60px}
+
+  .hero-card{
+    min-height:620px;
+  }
+
+  .hero-card img{
+    height:460px;
+    transform:rotate(90deg) scale(1.22);
+  }
 }
 
 @media(max-width:650px){
   .build-cards,.project-grid,.cert-grid,.gallery{grid-template-columns:1fr}
   h1{font-size:3.4rem}
-  .hero-card img{height:auto;max-height:none;object-fit:contain}
+
+  .hero-card{
+    min-height:540px;
+  }
+
+  .hero-card img{
+    height:390px;
+    transform:rotate(90deg) scale(1.24);
+  }
+
   footer{flex-direction:column;align-items:flex-start}
 }
