@@ -1,3 +1,5 @@
-# Weston Hayes Portfolio
+# WestonHayes.github.io
 
-GitHub Pages portfolio site.
+Personal portfolio website for Weston Hayes.
+
+Built with static HTML, CSS, and JavaScript for GitHub Pages.
